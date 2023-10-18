@@ -1,14 +1,13 @@
 let etchContainer = document.querySelector("#etchContainer");
 let generateButton = document.querySelector("#generateButton");
 let gridAmount = 64;
-let selectedColor = 'black';
-let colorSelector = document.querySelector('#colorSelector');
+let selectedColor = "black";
+let colorSelector = document.querySelector("#colorSelector");
 
 function selectColor() {
-selectedColor = colorSelector.value;
+  selectedColor = colorSelector.value;
 }
-colorSelector.addEventListener('input', selectColor);
-
+colorSelector.addEventListener("input", selectColor);
 
 function generateGrid(entered) {
   for (i = 0; i < entered; i++) {
@@ -32,12 +31,11 @@ function getGridAmount() {
 }
 
 function deleteGrid() {
-    let etchContainer = document.querySelector("#etchContainer");
-    while (etchContainer.firstChild) {
-      etchContainer.removeChild(etchContainer.firstChild);
-    }
+  let etchContainer = document.querySelector("#etchContainer");
+  while (etchContainer.firstChild) {
+    etchContainer.removeChild(etchContainer.firstChild);
   }
-  
+}
 
 generateButton.addEventListener("click", function () {
   getGridAmount();
@@ -48,4 +46,14 @@ generateButton.addEventListener("click", function () {
 // Initial grid generation
 generateGrid(gridAmount);
 
-
+document.getElementById("captureButton").addEventListener("click", function () {
+  html2canvas(document.getElementById("etchContainer")).then(function (canvas) {
+    canvas.style.display = "none";
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.href = canvas.toDataURL();
+    a.download = "captured-image.png";
+    a.click();
+    document.body.removeChild(a);
+  });
+});

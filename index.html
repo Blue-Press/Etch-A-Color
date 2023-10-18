@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="mainContainer">
-    <div>
+      <div>
         <label for="gridAmount">Grid Size:</label>
-    <input type="text" id="gridAmount">
-    <button id="generateButton">Generate</button>
-</div>
-<div id="paintAreaContainer">
-    <input type="color" id="colorSelector">
-    <div id="etchContainer">  
-   
-        
+        <input type="text" id="gridAmount" />
+        <button id="generateButton">Generate</button>
+      </div>
+      <div id="paintAreaContainer">
+        <label for="colorSelector">Select Color</label>
+        <input type="color" id="colorSelector" />
+        <div id="etchContainer"></div>
+        <button id="captureButton">Capture Canvas</button>
+      </div>
     </div>
-</div>    
-</div>
     <script src="etch.js"></script>
-</body>
+    <script src="html2canvas-min.js"></script>
+  </body>
 </html>
