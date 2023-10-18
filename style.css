@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#etchContainer {
+  width: 900px;
+  height: 900px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+#gridRow {
+  display: flex;
+  flex-grow: 1;
+  width: auto;
+  height: auto;
+}
+
+#gridCell {
+  flex-grow: 1;
+  width: auto;
+  height: auto;
+  border: 0.1px black;
+  transition: background-color 0.3s;
+}
+#gridAmount {
+    margin-right: 10px;
+}
