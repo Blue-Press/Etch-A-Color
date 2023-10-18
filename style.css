@@ -13,8 +13,8 @@ body {
 }
 
 #etchContainer {
-  width: 800px;
-  height: 800px;
+  width: 960px;
+  height: 960px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -50,11 +50,6 @@ body {
   margin-top: 10px;
 }
 
-#paintAreaContainer button {
-  margin-top: 10px;
-  width: 200px;
-  height: 30px;
-}
 
 #paintAreaContainer label {
   margin-top: 10px;
