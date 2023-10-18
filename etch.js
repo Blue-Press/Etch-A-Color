@@ -27,20 +27,22 @@ function generateGrid(entered) {
 
 function getGridAmount() {
   gridAmount = document.querySelector("#gridAmount").value;
-  console.log(gridAmount);
 }
 
 function deleteGrid() {
   let etchContainer = document.querySelector("#etchContainer");
   while (etchContainer.firstChild) {
     etchContainer.removeChild(etchContainer.firstChild);
-  }
-}
+  } }
 
 generateButton.addEventListener("click", function () {
   getGridAmount();
-  deleteGrid();
-  generateGrid(gridAmount);
+  if (gridAmount <= 100) {
+    deleteGrid();
+    generateGrid(gridAmount);
+  } else {
+    return alert("Please enter a number of 100 or less");
+  }
 });
 
 // Initial grid generation
